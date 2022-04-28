@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+main {
+  border: 1px solid red;
+  width: 100vw;
+  margin-top: 30vh;
+}
+section {
+  border: 1px solid blue;
+  width: 100%;
+}
+article {
+  display: flex;
+}
+article div {
+  flex: 1;
+  padding: 60px;
+  width: 80%;
+  margin: auto;
+}
+header {
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  top: 0;
+  border: 1px solid red;
+  background: #fff;
+  background: linear-gradient(176deg, rgba(239, 239, 239, 1) 57%, rgba(255, 255, 255, 1) 100%);
+}
+header div {
+  flex: 1;
+  padding: 60px;
+  padding-top: 0;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+.right .can {
+  transform-origin: center;
+}
+img {
+  width: 100%;
+}
+#one,
+#two,
+#three {
+  height: 70vh;
+}
+#one {
+  background-color: honeydew;
+}
+#two {
+  background-color: rgb(232, 191, 109);
+}
+#three {
+  background-color: rgb(172, 210, 172);
+}
+
+#news,
+#water {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  z-index: 9;
+  width: 15vw;
+  cursor: move;
+  z-index: 10;
+}
