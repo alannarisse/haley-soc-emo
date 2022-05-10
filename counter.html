@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="firenum">1</p>
+    <p><a id="news" href="#">News</a></p>
+    <p><a id="water" href="#">Water</a></p>
+    <p id="message"></p>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    let curFireNum = 1
+
+    $('#news').click(function () {
+      curFireNum++
+      incrementFire(curFireNum)
+    })
+    $('#water').click(function () {
+      curFireNum--
+      decrementFire(curFireNum)
+    })
+
+    function incrementFire(curFireNum) {
+      if (curFireNum <= 3) {
+        $('#message').html('you need to cool your fire')
+      } else if (curFireNum >= 4) {
+        $('#message').html('time for a timeout!')
+        curFireNum = 3
+      }
+
+      return updateFireNum(curFireNum)
+    }
+
+    function decrementFire(curFireNum) {
+      if (curFireNum > 1) {
+        $('#message').html(`you're getting cooler`)
+      } else if (curFireNum <= 1) {
+        curFireNum = 1
+        $('#message').html(`you're cool as a cucumber`)
+      }
+      return updateFireNum(curFireNum)
+    }
+
+    function updateFireNum(curFireNum) {
+      $('#firenum').html(curFireNum)
+    }
+  </script>
+</html>

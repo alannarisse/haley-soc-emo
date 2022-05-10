@@ -88,6 +88,7 @@ function dragWaterElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null
     document.onmousemove = null
+    $('#water').css('top', '0').css('left', '60px')
   }
 }
 
